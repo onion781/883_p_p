@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+.venv/
+.idea/
+
+.env
+.streamlit/secrets.toml
+
+*.db
+data/raw/
+
+.DS_Store
+Thumbs.db
