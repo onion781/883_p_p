@@ -1,0 +1,64 @@
+[
+  {
+    "category": "Course information",
+    "keywords": [
+      "csit883",
+      "course information",
+      "course description",
+      "course outline",
+      "course content",
+      "course schedule",
+      "timetable",
+      "prerequisite",
+      "prerequisites",
+      "assessment",
+      "assessment details",
+      "assessment methods",
+      "syllabus"
+    ],
+    "answer": "In this demo, CSIT883 is the course associated with the SmartCampus project. To find its description, assessment details, teaching schedule or prerequisites, sign in to the university learning platform and open the course outline on the CSIT883 course page."
+  },
+  {
+    "category": "Course enrolment",
+    "keywords": [
+      "enrolment",
+      "enrollment",
+      "enrol",
+      "enroll",
+      "course registration",
+      "register for courses",
+      "register for a course",
+      "add a course",
+      "drop a course",
+      "change courses",
+      "swap courses",
+      "choose a course",
+      "select courses",
+      "student portal"
+    ],
+    "answer": "Example enrolment steps:\n1. Sign in to the student portal and open the enrolment page.\n2. Select the term, search for the course code and check the prerequisites and timetable.\n3. Add the course, submit your selection and check its status in your enrolled courses list.\nCheck the university student portal for official deadlines and rules about changing or dropping courses."
+  },
+  {
+    "category": "Learning resources",
+    "keywords": [
+      "learning resources",
+      "library",
+      "library catalogue",
+      "ebook",
+      "ebooks",
+      "e-book",
+      "e-books",
+      "lecture notes",
+      "lecture slides",
+      "lecture recordings",
+      "recordings",
+      "course materials",
+      "study materials",
+      "revision materials",
+      "reference books",
+      "journals",
+      "databases"
+    ],
+    "answer": "Look for lecture slides, recordings and assignment materials on your course page in the university learning platform. You can also search the university library catalogue for e-books, journals and databases. Sign in with your student account when access requires it."
+  }
+]
