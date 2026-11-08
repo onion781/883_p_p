@@ -10,12 +10,12 @@ st.set_page_config(
 
 init_db()
 
-st.title("SmartCampus 智慧校园服务系统")
+st.title("SmartCampus System")
 st.caption("CSIT883 System Analysis and Project Management | Group G17")
 
 st.write(
-    "本系统面向 GlobalConnect University 原型场景，"
-    "包括学习支持、设施服务和行政服务三个子系统。"
+    "This system is oriented towards the GlobalConnect University."
+    "including three subsystems: Learning Support, Facility Services, and Administrative Services."
 )
 
 st.divider()
@@ -23,25 +23,21 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.subheader("学习支持")
-    st.write("学业预警：Huang")
-    st.write("智能问答：Song")
+    st.subheader("Learning Support")
+    st.write("Academic Warning: Huang")
+    st.write("Intelligent Q&A: Song")
 
 with col2:
-    st.subheader("设施服务")
-    st.write("教室预约：Yang")
-    st.write("故障报修与维护：Yang")
+    st.subheader("Facility Services")
+    st.write("Classroom Reservation: Yang")
+    st.write("Fault Reporting & Maintenance: Yang")
 
 with col3:
-    st.subheader("行政服务")
-    st.write("统一申请门户：Wang")
-    st.write("材料自动审核：Wang")
+    st.subheader("Administrative Services")
+    st.write("Unified Application Portal: Wang")
+    st.write("Automated Material Review: Wang")
 
 st.divider()
 
-st.info("请通过左侧导航进入六个功能页面。")
+st.info("Please use the left navigation to access the six functional pages.")
 
-st.warning(
-    "当前为课程演示原型。校园业务记录均为演示数据，"
-    "学业预警结果仅用于辅助人工复核。"
-)
