@@ -8,8 +8,8 @@ __pycache__/
 .env
 .streamlit/secrets.toml
 
-*.db
-data/raw/
 
 .DS_Store
 Thumbs.db
+
+*.db
