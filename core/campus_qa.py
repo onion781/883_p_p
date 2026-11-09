@@ -27,16 +27,20 @@ def get_api_key():
 
 def search_knowledge(question, knowledge):
     query = question.casefold()
+    course_codes = set(re.findall(r"\bgcu\d{3}\b", query))
     ranked = []
     for entry in knowledge:
+        code = entry.get("course_code", "").casefold()
+        if code and course_codes and code not in course_codes:
+            continue
         score = max(
-            (1 if keyword == "csit883" else len(keyword)
-             for keyword in entry["keywords"]
+            (len(keyword) for keyword in entry["keywords"]
              if re.search(r"(?<![a-z0-9])" + re.escape(keyword) + r"(?![a-z0-9])", query)),
             default=0,
         )
-        if score:
-            ranked.append((score, entry))
+        code_match = code in course_codes
+        if code_match or score:
+            ranked.append(((code_match, score), entry))
     ranked.sort(key=lambda match: match[0], reverse=True)
     return [entry for _, entry in ranked]
 
@@ -44,9 +48,9 @@ def search_knowledge(question, knowledge):
 def ask_deepseek(api_key, question, history, references):
     context = "\n".join(f"{entry['category']}: {entry['answer']}" for entry in references)
     instructions = (
-        "You are the SmartCampus campus assistant. Always respond in English, even if the question is in another language. Use the conversation history to understand follow-up questions. "
+        "You are the SmartCampus assistant for the GlobalConnect University (GCU) project demo. Always respond in English, even if the question is in another language. Use the conversation history to understand follow-up questions. "
         "Respond naturally to greetings. Base campus facts only on the demonstration materials below. "
-        "If the materials are insufficient, say so and suggest checking the university's official channels. "
+        "If the materials are insufficient, say so. Present all campus details as demo information. "
         "Do not invent dates, links, policies or course details.\n\n" + context
     )
     messages = [{"role": "system", "content": instructions}]
@@ -77,12 +81,21 @@ def answer_question(question, history, api_key):
         knowledge = json.load(file)
 
     matches = search_knowledge(question, knowledge)
+    if not re.search(r"\bgcu\d{3}\b", question.casefold()) and (
+        not matches or matches[0]["category"] == "Course catalogue"
+    ):
+        previous_question = next((row["content"] for row in reversed(history) if row["role"] == "user"), "")
+        previous_courses = [
+            entry for entry in search_knowledge(previous_question, knowledge) if entry.get("course_code")
+        ]
+        if previous_courses and (matches or re.search(r"\b(it|its|there|that course|this course)\b", question.casefold())):
+            matches = previous_courses + matches
     notice = ""
     if api_key:
         references = matches or knowledge
         try:
             answer = ask_deepseek(api_key, question, history, references)
-            return answer, "ai", [entry["category"] for entry in matches], notice
+            return answer, "ai", list(dict.fromkeys(entry["source"] for entry in matches)), notice
         except HTTPError as error:
             status = error.code
             reason = {
@@ -102,7 +115,7 @@ def answer_question(question, history, api_key):
             notice = "DeepSeek did not return a complete response."
 
     if matches:
-        return matches[0]["answer"], "fallback", [matches[0]["category"]], notice
+        return matches[0]["answer"], "fallback", [matches[0]["source"]], notice
 
     greeting = question.casefold().strip(" \t\r\n,.!?")
     if greeting in {"hi", "hello", "hey", "who are you", "what can you do"}:

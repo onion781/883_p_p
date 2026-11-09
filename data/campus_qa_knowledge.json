@@ -1,64 +1,94 @@
 [
   {
-    "category": "Course information",
+    "category": "Course catalogue",
+    "source": "GCU Demo Course Catalogue",
     "keywords": [
-      "csit883",
+      "course catalogue",
+      "course catalog",
+      "available courses",
+      "demo courses",
+      "course list",
       "course information",
-      "course description",
       "course outline",
-      "course content",
-      "course schedule",
-      "timetable",
-      "prerequisite",
+      "syllabus",
       "prerequisites",
       "assessment",
-      "assessment details",
-      "assessment methods",
-      "syllabus"
+      "final exam"
     ],
-    "answer": "In this demo, CSIT883 is the course associated with the SmartCampus project. To find its description, assessment details, teaching schedule or prerequisites, sign in to the university learning platform and open the course outline on the CSIT883 course page."
+    "answer": "The GCU demo catalogue includes GCU101 (Introduction to Data Analytics), GCU102 (Academic Communication), and GCU201 (Applied Data Visualisation). Ask about a course by its name or code for prerequisites and assessment details."
   },
   {
-    "category": "Course enrolment",
+    "category": "Introduction to Data Analytics",
+    "source": "GCU Demo Course Catalogue",
+    "course_code": "GCU101",
+    "keywords": [
+      "introduction to data analytics"
+    ],
+    "answer": "GCU101: Introduction to Data Analytics. Learn how to clean tabular data, calculate summary statistics and create basic charts. No prerequisites. Assessment: weekly quizzes 20%, data analysis project 35%, final exam 45%."
+  },
+  {
+    "category": "Academic Communication",
+    "source": "GCU Demo Course Catalogue",
+    "course_code": "GCU102",
+    "keywords": [
+      "academic communication"
+    ],
+    "answer": "GCU102: Academic Communication. Practise academic writing, referencing and oral presentations. No prerequisites. Assessment: annotated bibliography 25%, research essay 45%, oral presentation 30%. There is no final exam."
+  },
+  {
+    "category": "Applied Data Visualisation",
+    "source": "GCU Demo Course Catalogue",
+    "course_code": "GCU201",
+    "keywords": [
+      "applied data visualisation",
+      "applied data visualization"
+    ],
+    "answer": "GCU201: Applied Data Visualisation. Learn to select charts, design dashboards and explain findings. Prerequisite: completion of GCU101. Assessment: dashboard exercises 25%, interactive dashboard project 45%, final portfolio 30%. There is no final exam."
+  },
+  {
+    "category": "Enrolment",
+    "source": "GCU Demo Enrolment Guide",
     "keywords": [
       "enrolment",
       "enrollment",
       "enrol",
       "enroll",
       "course registration",
-      "register for courses",
       "register for a course",
+      "register for courses",
       "add a course",
       "drop a course",
-      "change courses",
       "swap courses",
-      "choose a course",
-      "select courses",
-      "student portal"
+      "student portal",
+      "full class",
+      "class is full",
+      "course is full",
+      "waitlist",
+      "wait list"
     ],
-    "answer": "Example enrolment steps:\n1. Sign in to the student portal and open the enrolment page.\n2. Select the term, search for the course code and check the prerequisites and timetable.\n3. Add the course, submit your selection and check its status in your enrolled courses list.\nCheck the university student portal for official deadlines and rules about changing or dropping courses."
+    "answer": "In the GCU demo, open Student Portal > Enrolment, select your term, search for the course, and choose a class with an available place. Check the prerequisites and timetable before submitting. An Enrolled status in My Enrolments confirms your place. If the class is full, select another class or join the waitlist if available. Waitlisted means you do not yet have a confirmed place. Use the term dates shown in the Student Portal to check the demo enrolment deadline."
   },
   {
     "category": "Learning resources",
+    "source": "GCU Demo Learning Resources Guide",
     "keywords": [
       "learning resources",
+      "lecture recordings",
+      "recordings",
+      "lecture slides",
+      "lecture notes",
+      "course materials",
+      "study materials",
       "library",
       "library catalogue",
       "ebook",
       "ebooks",
-      "e-book",
       "e-books",
-      "lecture notes",
-      "lecture slides",
-      "lecture recordings",
-      "recordings",
-      "course materials",
-      "study materials",
-      "revision materials",
-      "reference books",
-      "journals",
-      "databases"
+      "academic support",
+      "learning support",
+      "writing help",
+      "study skills"
     ],
-    "answer": "Look for lecture slides, recordings and assignment materials on your course page in the university learning platform. You can also search the university library catalogue for e-books, journals and databases. Sign in with your student account when access requires it."
+    "answer": "In the GCU demo, open Learning Portal > My Courses > your course > Weekly Materials for slides and notes. Open Recordings on the course page to find available lecture recordings. Search Library Catalogue for e-books and journals, and sign in with your student account when prompted. For help with writing, referencing or study skills, use Learning Support > Book an Appointment."
   }
 ]
