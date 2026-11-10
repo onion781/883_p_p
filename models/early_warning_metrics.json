@@ -1,0 +1,14 @@
+{
+  "dataset": "Open University Learning Analytics Dataset",
+  "source": "https://doi.org/10.6084/m9.figshare.5081998.v1",
+  "license": "CC BY 4.0",
+  "cutoff_day": 60,
+  "samples": 32593,
+  "train_samples": 25942,
+  "test_samples": 6651,
+  "roc_auc": 0.7785,
+  "accuracy": 0.6934,
+  "precision": 0.7597,
+  "recall": 0.564,
+  "f1": 0.6474
+}
