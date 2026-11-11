@@ -153,4 +153,4 @@ def init_db():
 
 if __name__ == "__main__":
     init_db()
-    print(f"Database initialized: {DB_PATH}")
+    print(f"Dastreamlit run app.pytabase initialized: {DB_PATH}")
